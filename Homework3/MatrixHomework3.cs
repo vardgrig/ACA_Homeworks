@@ -37,9 +37,10 @@ float MatrixProblem1(int[,] matrix)
 int MatrixProblem2(int[,] matrix)  //Matrix have Opposite diagonal if it is square matrix ( n == m)
 {
     int result = 0;
-    for (int i = 0; i < matrix.GetLength(0); ++i)
+    int length = matrix.GetLength(0);
+    for (int i = 0; i < length; ++i)
     {
-        for (int j = 0; j < matrix.GetLength(0) - i; ++j)
+        for (int j = 0; j < length - i; ++j)
         {
             if (matrix[i, j] % 2 != 0)
                 ++result;
@@ -49,8 +50,7 @@ int MatrixProblem2(int[,] matrix)  //Matrix have Opposite diagonal if it is squa
 }
 
 int n = 4;
-int m = 4;
-int[,] matrix = new int[n, m];
+int[,] matrix = new int[n, n];
 FillMatrix(matrix);
 PrintMatrix(matrix);
 Console.WriteLine(MatrixProblem1(matrix));
