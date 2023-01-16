@@ -34,7 +34,7 @@ float MatrixProblem1(int[,] matrix)
     }
     return result/count;
 }
-int MatrixProblem2(int[,] matrix)  //Matrix have Opposite diagonal if it is square matrix ( n == m)
+int MatrixProblem2(int[,] matrix)
 {
     int result = 0;
     int length = matrix.GetLength(0);
